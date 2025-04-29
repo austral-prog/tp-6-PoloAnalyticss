@@ -53,4 +53,40 @@ print(check_lists(list_to_compare1, list_to_compare2))
 
 
 def list_of_lists(list_of_lists_to_modify):
+    if len(list_of_lists_to_modify[0])  >= 2:
+        list_of_lists_to_modify[0] = list_of_lists_to_modify[0][:2] 
+
+    elif len(list_of_lists_to_modify[0])  == 1:
+        list_of_lists_to_modify[0] = list_of_lists_to_modify[0][:1]
+
+    else:
+        list_of_lists_to_modify[0] = []
+       
+        
     
+    if len(list_of_lists_to_modify[1])  >= 4:
+        list_of_lists_to_modify[1] = list_of_lists_to_modify[1][1:4]
+        
+    elif len(list_of_lists_to_modify[1])  >= 3:
+        list_of_lists_to_modify[1] = list_of_lists_to_modify[1][1:3]
+        
+    elif len(list_of_lists_to_modify[1])  >= 2:
+        list_of_lists_to_modify[1] = list_of_lists_to_modify[1][1:2]
+        
+    else: 
+        list_of_lists_to_modify[1] = []
+
+    
+    if len(list_of_lists_to_modify[2]) >= 2:
+        list_of_lists_to_modify[2] = list_of_lists_to_modify[2][-2:] 
+
+    elif len(list_of_lists_to_modify[2])  == 1:
+        list_of_lists_to_modify[2] = list_of_lists_to_modify[2][-1:]
+
+    else:
+        list_of_lists_to_modify[2] = []
+       
+    return list_of_lists_to_modify
+
+list_of_lists_to_modify = [[1, 2, 3], [4, 5, 6, 7, 8], [9, 10, 11, 12]] 
+print(list_of_lists(list_of_lists_to_modify))
